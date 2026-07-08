@@ -1,0 +1,14 @@
+.banner {
+    background: #b30000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold
+}
+
+.stButton>button {
+    background: #b30000;
+    color: white;
+    border-radius: 8px
+}
