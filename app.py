@@ -8,7 +8,21 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 
 load_dotenv()
 llm=ChatMistralAI(model="mistral-small-latest")
-tool=TavilySearchResults(max_results=5)
+tavily_api_key = os.getenv("TAVILY_API_KEY")
+if tavily_api_key:
+    tool = TavilySearchResults(max_results=5, tavily_api_key=tavily_api_key)
+else:
+    class DummyNewsTool:
+        def __init__(self, max_results=5):
+            self.max_results = max_results
+        def invoke(self, q):
+            return (
+                "Sample news (TAVILY_API_KEY not set):\n"
+                "- Market update: Gold rises 0.5% amid safe-haven demand.\n"
+                "- Economy: Inflation data expected tomorrow could move markets.\n"
+                "- Commodities: Oil steady as supply concerns ease.\n"
+            )
+    tool = DummyNewsTool(max_results=5)
 prompt=ChatPromptTemplate.from_template("""
 You are an AI assistant.
 Summarize the following news into one line bullet points with indexes.
