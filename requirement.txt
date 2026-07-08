@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 streamlit
 python-dotenv
 langchain
@@ -6,3 +7,12 @@ langchain-mistralai
 langchain-community
 langchain-tavily
 tavily-python
+=======
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-mistralai
+python-dotenv
+pydantic
+>>>>>>> f88a88dfda16b556c87a6d509484fa94ccb6c34b
