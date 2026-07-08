@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .banner {
     background: #b30000;
     color: white;
@@ -12,19 +11,4 @@
     background: #b30000;
     color: white;
     border-radius: 8px
-=======
-.banner {
-    background: #b30000;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 34px;
-    font-weight: bold
-}
-
-.stButton>button {
-    background: #b30000;
-    color: white;
-    border-radius: 8px
->>>>>>> f88a88dfda16b556c87a6d509484fa94ccb6c34b
 }
